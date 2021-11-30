@@ -1,0 +1,92 @@
+<div class="container col-lg-6 mt-3 shadow-lg">
+  <h2 class="text-center mt-3"><u>Registation</u></h2>
+  <form [formGroup]="regForm">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="Fname" class="form-label">
+          First Name
+          <span class="text-danger">*</span>
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Your FirstName"
+          formControlName="fName"
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="Lname" class="form-label">
+          Lasrt Name
+          <span class="text-danger">*</span>
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Your LastName"
+          formControlName="lName"
+        />
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="Mobile" class="form-label">
+          Mobile<span class="text-danger">*</span>
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Your Mobile Numbers"
+          formControlName="mobile"
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">
+          Email
+          <span class="text-danger">*</span>
+        </label>
+        <input
+          type="email"
+          class="form-control"
+          placeholder="Your Email Address"
+          formControlName="email"
+        />
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="password" class="form-label">
+          Password
+          <span class="text-danger">*</span>
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Your Password"
+          formControlName="pwd"
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="ConformPassword" class="form-label"
+          >ConformPassword<span class="text-danger">*</span></label
+        >
+        <input
+          type="password"
+          class="form-control"
+          placeholder="ConformPassword"
+          formControlName="conPwd"
+        />
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col text-center mb-2">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="!regForm.valid"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
